@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#bloco {
+            font: normal 20pt Arial;
+            background: rgb(37, 66, 233);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border: solid 2px black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco">
+        Interaja...
+    </div>
+
+    <script>
+        var bloco = window.document.getElementById('bloco');
+        bloco.addEventListener('click', clicar);
+        bloco.addEventListener('mouseenter', entrar);
+        bloco.addEventListener('mouseout', sair);
+
+
+
+        /*onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" */
+        function clicar(){
+            bloco.innerText = 'Clicou!';
+            bloco.style.background = 'red';
+        }
+        function entrar(){
+            bloco.innerText = 'Entrou!';
+        }
+        function sair(){
+            bloco.innerText = 'Saiu!';
+            bloco.style.background = 'rgb(37, 66, 233)';
+        }
+
+    </script>
+</body>
+</html>
