@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Sistema de País</h1>
+    Digite o país que está vivendo: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificarNac()">
+    <div id="res">
+        Resultado... 
+    </div>
+
+    <script>
+        function verificarNac(){
+        
+            var pais = window.document.getElementById('pais').value;
+            var resultado = window.document.getElementById('res');
+            resultado.innerHTML = `Vivendo em ${pais}`;
+            if (pais != 'Brasil') {
+                resultado.innerHTML += '<p>Você é <strong>estrangeiro</strong>!</p>';
+            }else{
+                resultado.innerHTML += `<p>Você é <strong>brasileiro</strong>!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
